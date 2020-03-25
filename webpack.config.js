@@ -18,11 +18,10 @@ const dotenvConfig = dotenv.config();
 
 module.exports = env => {
   const environmentPlugin = new webpack.EnvironmentPlugin({
-    NODE_ENV: process.env.NODE_ENV,
     ...dotenvConfig.parsed
   });
   return {
-    mode: process.env.NODE_ENV,
+    mode: "development",
     entry: "index.js",
     resolve: {
       extensions: [".js", ".jsx"]

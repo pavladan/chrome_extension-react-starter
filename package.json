@@ -4,12 +4,9 @@
   "description": "Minimal and modern chrome_extension+react+webpack+babel boilerplate",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack --config webpack/webpack.serve.js --watch",
-    "start:prod": "cross-env NODE_ENV=production webpack --config webpack/webpack.serve.js --watch",
-    "build": "cross-env NODE_ENV=development webpack --config webpack/webpack.build.js",
-    "build:prod": "cross-env NODE_ENV=production webpack --config webpack/webpack.build.js",
-    "zip": "cross-env NODE_ENV=development webpack --config webpack/webpack.zip.js",
-    "zip:prod": "cross-env NODE_ENV=production webpack --config webpack/webpack.zip.js"
+    "start": "webpack --config webpack/webpack.serve.js --watch",
+    "build": "webpack --config webpack/webpack.build.js",
+    "zip": "webpack --config webpack/webpack.zip.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +19,6 @@
   },
   "homepage": "https://github.com/pavladan/chrome_extension-react-starter#readme",
   "devDependencies": {
-    "cross-env": "^7.0.2",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^6.0.0",
     "html-loader": "^1.0.0",

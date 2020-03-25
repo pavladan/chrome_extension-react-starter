@@ -5,13 +5,12 @@ const WebpackZipPlugin = require("webpack-zip-plugin");
 const config = require("./extensionManifestEnv");
 
 module.exports = env => {
-	const envMode = process.env.NODE_ENV;
   return WebpackMerge(prodConfig(env), {
     plugins: [
       new WebpackZipPlugin({
         initialFile: paths.outputDir,
         endPath: paths.releaseDir,
-        zipName: config.name[envMode].replace(/[. ]/g,'_')
+        zipName: config.name.replace(/[. ]/g,'_')
       })
     ]
   });

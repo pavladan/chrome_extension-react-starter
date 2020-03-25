@@ -33,32 +33,14 @@ npm install
 npm start
 ```
 
-Or start on the prod mode
-
-``` bash
-npm run start:prod
-```
-
 ### Create build (dist folder):
 
 ``` bash
 npm run build
 ```
 
-Or build on the prod mode
-
-``` bash
-npm run build:prod
-```
-
 ### Create building .zip in build folder:
 
 ``` bash
 npm run zip
-```
-
-Or create .zip on the prod mode
-
-``` bash
-npm run zip:prod
 ```

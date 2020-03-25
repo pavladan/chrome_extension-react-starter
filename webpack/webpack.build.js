@@ -4,6 +4,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = env => {
   let config = {
+		mode: "production",
     plugins: [
       new TerserPlugin({
         parallel: true,

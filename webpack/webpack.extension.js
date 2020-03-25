@@ -18,7 +18,7 @@ const copy = new CopyWebpackPlugin([
     transform: function(content, path) {
       return content
         .toString()
-        .replace(/#name#/g, extensionConfig.name[process.env.NODE_ENV])
+        .replace(/#name#/g, extensionConfig.name)
         .replace(/#version#/g, extensionConfig.version)
         .replace(/#description#/g, extensionConfig.description)
     }
