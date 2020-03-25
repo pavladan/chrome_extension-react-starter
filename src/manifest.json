@@ -1,0 +1,37 @@
+{
+  "name": "#name#",
+  "version": "#version#",
+  "description": "#description#",
+  "author": "https://github.com/pavladan",
+  "permissions": [
+    "storage",
+		"identity",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "32": "icons/IconON32.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+			"matches": ["http://*/*", "https://*/*"],
+      "all_frames": true,
+      "js": ["content-script.js"]
+    }
+  ],
+  "web_accessible_resources": ["images/*.*", "icons/*.*", "fonts/*.*"],
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+  "manifest_version": 2
+}
